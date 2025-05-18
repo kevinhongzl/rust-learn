@@ -34,8 +34,12 @@ fn main() {
 
     cmd1.print_payload();
     // cmd2.print_payload();
+
     let p1: &String = cmd1.get_payload();
     let p2: &i32 = cmd2.get_payload();
+
+    serialize_payload(p1);
+    serialize_payload(p2);
 }
 
 fn serialize_payload<T>(payload: T) -> String {
